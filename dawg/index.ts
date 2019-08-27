@@ -36,6 +36,7 @@ function createDawg(words: string[]) {
 
   // Methods
   const insert = (word: string) => {
+    // Implementation details adapted from http://stevehanov.ca/blog/index.php?id=115 (python)
     if (word < previousWord) {
       throw new Error('alphabetical order required')
     }
