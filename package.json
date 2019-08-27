@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "compile": "npx tsc -p .",
-    "find-prefix": "npm run compile && node ./dist/examples/findPrefixes.js"
+    "find-prefix": "node ./dist/examples/findPrefixes.js"
   },
   "author": "",
   "license": "ISC",
