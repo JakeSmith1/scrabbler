@@ -1,0 +1,16 @@
+{
+  "name": "scrabbler",
+  "version": "1.0.0",
+  "description": "_Tools to help you cheat in Scrabble_",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx tsc -p .",
+    "find-prefix": "npm run compile && node ./dist/examples/findPrefixes.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.7.2",
+    "typescript": "^3.5.3"
+  }
+}
