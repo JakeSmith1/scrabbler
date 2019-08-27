@@ -1,8 +1,13 @@
 {
   "name": "scrabbler",
   "version": "1.0.0",
-  "description": "_Tools to help you cheat in Scrabble_",
-  "main": "index.js",
+  "description": "Tools to help you cheat in Scrabble",
+  "keywords": [
+    "DAWG",
+    "scrabble",
+    "words with friends",
+    "directed acyclic word graph"
+  ],
   "scripts": {
     "compile": "npx tsc -p .",
     "find-prefix": "node ./dist/examples/findPrefixes.js"
