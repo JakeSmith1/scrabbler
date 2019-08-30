@@ -3,7 +3,7 @@ interface Edges {
   [letter: string]: DawgNode
 }
 
-interface DawgNode {
+export interface DawgNode {
   id: number
   final: boolean
   edges: Edges
@@ -105,6 +105,19 @@ function createDawg(words: string[]) {
     return node.final
   }
 
+  const hasPath = (letters: string[]) => {
+    let node = root
+
+    for (const letter of letters) {
+      if (!node.edges[letter]) {
+        return false
+      }
+      node = node.edges[letter]
+    }
+
+    return true
+  }
+
   const nodeCount = () => Object.keys(minimizedNodes).length
 
   const edgeCount = () =>
@@ -125,7 +138,8 @@ function createDawg(words: string[]) {
     lookup,
     nodeCount,
     edgeCount,
-    root
+    root,
+    hasPath
   }
 }
 
